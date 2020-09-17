@@ -1,12 +1,14 @@
 <template>
   <div class="header">
     <div class="header__inner-content">
-      <router-link
-        tag="div"
-        :to="{ name: 'country-grid' }"
-        class="header__title"
-        >Where in the world?</router-link
-      >
+      <div class="header__link" @click="scrollTop">
+        <router-link
+          tag="div"
+          :to="{ name: 'country-grid' }"
+          class="header__title"
+          >Where in the world?</router-link
+        >
+      </div>
       <div @click="toggleDarkMode" class="header__switch-mode">Dark Mode</div>
     </div>
   </div>
@@ -35,6 +37,10 @@ export default {
         document.documentElement.setAttribute("data-theme", "light");
         localStorage.setItem("theme", "light");
       }
+    },
+
+    scrollTop() {
+      window.scrollTo(0, 0);
     },
   },
 
