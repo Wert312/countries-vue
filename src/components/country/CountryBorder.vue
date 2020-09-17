@@ -67,8 +67,6 @@ export default {
 
   .borderLinks {
     margin: 0 5px 10px 0px;
-    min-width: 100px;
-    width: inherit;
     display: table;
     align-self: center;
     padding: 2px 5px;

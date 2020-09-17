@@ -35,6 +35,10 @@ export default {
     // search
     GET_SEARCH_VALUE(state) {
       return state.searchValue;
+    },
+
+    GET_SEARCH_ERROR(state) {
+      return state.searchError;
     }
   },
 

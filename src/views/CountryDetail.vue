@@ -17,7 +17,7 @@
             <p><strong>Native Name: </strong>{{ country.nativeName }}</p>
             <p>
               <strong>Population: </strong
-              >{{ country.population | formatNumbers }}
+              >{{ country.population | FormatNumbers }}
             </p>
             <p><strong>Region: </strong>{{ country.region }}</p>
             <p><strong>Sub Region: </strong>{{ country.subregion }}</p>
@@ -30,8 +30,8 @@
               <strong>Top Level Domain: </strong>{{ country.topLevelDomain[0] }}
             </p>
             <p><strong>Currency: </strong>{{ country.currencies[0].name }}</p>
-            <p>
-              <strong>Language: </strong
+            <p class="languagesList">
+              <strong>Languages: </strong
               ><span
                 v-for="(language, index) in country.languages"
                 v-bind:key="index"
@@ -274,6 +274,10 @@ export default {
       p {
         margin-top: 0;
       }
+    }
+
+    .languagesList {
+      line-height: 25px;
     }
   }
 </style>

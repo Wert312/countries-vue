@@ -56,10 +56,6 @@ export default {
     grid-column-gap: 10px;
     grid-row-gap: 40px;
     width: 100%;
-
-    @include for-desktop {
-      justify-content: space-between;
-    }
   }
 </style>
 
