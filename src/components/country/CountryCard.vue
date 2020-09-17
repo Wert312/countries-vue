@@ -11,7 +11,7 @@
       <div class="card__title">{{ country.name }}</div>
       <div class="card__text">
         <p>
-          <strong>Population: </strong>{{ country.population | formatNumbers }}
+          <strong>Population: </strong>{{ country.population | FormatNumbers }}
         </p>
         <p><strong>Region: </strong>{{ country.region }}</p>
         <p><strong>Capital: </strong>{{ country.capital || "No capital" }}</p>
@@ -22,7 +22,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import FormatNumbers from "../../filters/formatNumbers";
+import FormatNumbers from "../../filters/FormatNumbers";
 
 export default {
   name: "country-card",
